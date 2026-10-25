@@ -1,50 +1,33 @@
-# Social Network Ads — Purchase Prediction
+﻿# Social Network Ads — Purchase Prediction
 
-A beginner machine-learning project that explores purchase prediction from a user’s age and estimated salary using Logistic Regression.
+A learning project that explores Logistic Regression for predicting purchase outcomes from age and salary. It demonstrates basic data inspection, visualization, a reproducible train/test split, feature scaling, and class-wise evaluation.
 
-## Project workflow
+## Dataset
 
-The notebook demonstrates:
-
-- Loading and exploring tabular data with Pandas
-- Visualizing purchase outcomes with Matplotlib and Seaborn
-- Splitting data into training and test sets
-- Training a Logistic Regression classifier with scikit-learn
-- Generating predictions and evaluating the model
-
-## Tools
-
-Python · Jupyter Notebook · Pandas · NumPy · Matplotlib · Seaborn · scikit-learn
-
-## Repository contents
-
-- `social_network_ads_logistic_regression.ipynb` — analysis and model workflow
-- `requirements.txt` — Python dependencies
-- `README.md` — project documentation
+The user-provided `Social_Network_Ads.csv` is included in `data/`. It contains 400 rows with `User ID`, `Gender`, `Age`, `Salary`, and `Purchased`. The notebook uses only `Age` and `Salary`; identifiers and gender are excluded from model training.
 
 ## Run the notebook
-   
-1. Clone or download this repository.
-2. Install dependencies:
+
+1. Install the dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Obtain the `Social_Network_Ads.csv` dataset from a source you are permitted to use and place it in a `data/` folder at the repository root.
-4. Update the notebook’s data-loading cell to use the repository-relative path:
+2. Start Jupyter from the repository root:
 
-   ```python
-   import pandas as pd
-   df = pd.read_csv("data/Social_Network_Ads.csv")
+   ```bash
+   jupyter notebook
    ```
 
-5. Open and run the notebook in Jupyter Notebook or Google Colab.
+3. Open `social_network_ads_logistic_regression.ipynb` and run all cells. The notebook loads `data/Social_Network_Ads.csv` with a repository-relative path.
 
-## Data and results status
+The model uses a stratified 70/30 split (`random_state=42`) and a `StandardScaler` + `LogisticRegression` pipeline. Run the evaluation cells to see accuracy, precision, recall, F1-score, and a confusion matrix for that split. Results are for this small educational dataset and should not be treated as production performance.
 
-The CSV dataset is not included in this repository, and the notebook currently refers to a Google Colab path (`/content/Social_Network_Ads.csv`). The notebook has not been run here with the dataset, so no accuracy or other performance result is claimed. Add an appropriately licensed dataset, use the relative path above, and run the full notebook before reporting model metrics.
+## Tools
+
+Python · Pandas · Matplotlib · Seaborn · scikit-learn · Jupyter Notebook
 
 ## License
 
-No license has been selected for this repository yet.
+No license has been selected for this repository. Confirm the dataset's redistribution terms before reusing or redistributing it.
