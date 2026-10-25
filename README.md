@@ -1,65 +1,50 @@
 # Social Network Ads — Purchase Prediction
 
-A beginner machine-learning notebook that explores whether a user purchases a product based on their age and salary using **Logistic Regression**.
+A beginner machine-learning project that explores purchase prediction from a user’s age and estimated salary using Logistic Regression.
 
-## Project overview
+## Project workflow
 
-The notebook uses the `Social_Network_Ads.csv` dataset and includes:
-- Loading data with Pandas
-- Visualising age against purchase outcome
-- Splitting data into training and testing sets
-- Training a Logistic Regression classifier
-- Predicting purchase outcomes for sample ages
-- Checking model accuracy on the test set
+The notebook demonstrates:
 
-## Tech stack
+- Loading and exploring tabular data with Pandas
+- Visualizing purchase outcomes with Matplotlib and Seaborn
+- Splitting data into training and test sets
+- Training a Logistic Regression classifier with scikit-learn
+- Generating predictions and evaluating the model
 
-- Python
-- Jupyter Notebook
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- scikit-learn
+## Tools
 
-## Project files
+Python · Jupyter Notebook · Pandas · NumPy · Matplotlib · Seaborn · scikit-learn
 
-```text
-Social-Network-Ads-Purchase-Prediction/
-├── social_network_ads_logistic_regression.ipynb
-├── data/
-│   └── Social_Network_Ads.csv   # Add the dataset here; it was not included in the uploaded file
-├── requirements.txt
-├── .gitignore
-└── README.md
-```
+## Repository contents
 
-## Setup
+- `social_network_ads_logistic_regression.ipynb` — analysis and model workflow
+- `requirements.txt` — Python dependencies
+- `README.md` — project documentation
 
+## Run the notebook
+   
 1. Clone or download this repository.
-2. Install the dependencies:
+2. Install dependencies:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Add `Social_Network_Ads.csv` inside the `data/` folder.
-4. Open the notebook in Jupyter Notebook or Google Colab.
+3. Obtain the `Social_Network_Ads.csv` dataset from a source you are permitted to use and place it in a `data/` folder at the repository root.
+4. Update the notebook’s data-loading cell to use the repository-relative path:
 
-## Dataset note
+   ```python
+   import pandas as pd
+   df = pd.read_csv("data/Social_Network_Ads.csv")
+   ```
 
-The uploaded notebook refers to `/content/Social_Network_Ads.csv`, which is a Google Colab-style path. The CSV dataset was **not included** with the uploaded notebook. Before publishing a runnable version, add the dataset and update the notebook's data-loading cell to use a repository-relative path such as:
+5. Open and run the notebook in Jupyter Notebook or Google Colab.
 
-```python
-xxy = pd.read_csv("data/Social_Network_Ads.csv")
-```
+## Data and results status
 
-Only upload a dataset if you have the right to share it.
-
-## Important note
-
-This repository packages the notebook that was provided. Review the notebook's model-training and evaluation cells before presenting results publicly, and verify the reported accuracy by running it with the dataset.
+The CSV dataset is not included in this repository, and the notebook currently refers to a Google Colab path (`/content/Social_Network_Ads.csv`). The notebook has not been run here with the dataset, so no accuracy or other performance result is claimed. Add an appropriately licensed dataset, use the relative path above, and run the full notebook before reporting model metrics.
 
 ## License
 
-No license has been selected. Add a license only after deciding how you want others to use, modify, and distribute this project.
+No license has been selected for this repository yet.
